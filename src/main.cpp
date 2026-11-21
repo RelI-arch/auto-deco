@@ -34,9 +34,9 @@ class $modify(AutoDecoEditorUI, EditorUI) {
 
         auto win = CCDirector::sharedDirector()->getWinSize();
         CCPoint pos = {34.f, win.height - 75.f};
-        if (where == "Top Right") pos = {win.width - 34.f, win.height - 75.f};
-        else if (where == "Left") pos = {34.f, win.height * 0.5f};
-        else if (where == "Right") pos = {win.width - 34.f, win.height * 0.5f};
+        if (where == "Top Right") pos = CCPoint{win.width - 34.f, win.height - 75.f};
+        else if (where == "Left") pos = CCPoint{34.f, win.height * 0.5f};
+        else if (where == "Right") pos = CCPoint{win.width - 34.f, win.height * 0.5f};
         pos.x += static_cast<float>(mod->getSettingValue<int64_t>("button-offset-x"));
         pos.y += static_cast<float>(mod->getSettingValue<int64_t>("button-offset-y"));
 
